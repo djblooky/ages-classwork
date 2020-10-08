@@ -1,8 +1,12 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class ContextualMessageController : MonoBehaviour
 {
+    [SerializeField]
+    private float delayBeforehidingText = 3;
+
     private CanvasGroup canvasGroup;
     private TMP_Text messageText;
 
@@ -11,12 +15,16 @@ public class ContextualMessageController : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         messageText = GetComponent<TMP_Text>();
         canvasGroup.alpha = 0;
+
+        StartCoroutine(ShowMessage("Testing"));
     }
 
-    private void ShowMessage(string message, float duration)
+    private IEnumerator ShowMessage(string message)
     {
+        canvasGroup.alpha = 1;
         messageText.text = message;
+        yield return new WaitForSeconds(delayBeforehidingText);
+        canvasGroup.alpha = 0;
     }
-
 
 }
