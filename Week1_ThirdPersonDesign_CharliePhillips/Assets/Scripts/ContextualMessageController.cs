@@ -25,4 +25,19 @@ public class ContextualMessageController : MonoBehaviour
         canvasGroup.alpha = 0;
     }
 
+    private void OnMessageTriggerEntered()
+    {
+        ShowMessage("Trigger entered!");
+    }
+
+    private void OnEnable()
+    {
+        ContextualMessageTrigger.MessageTriggerEntered += OnMessageTriggerEntered;
+    }
+
+    private void OnDisable()
+    {
+        ContextualMessageTrigger.MessageTriggerEntered -= OnMessageTriggerEntered;
+    }
+
 }
