@@ -27,7 +27,7 @@ public class ContextualMessageController : MonoBehaviour
 
     private void OnMessageTriggerEntered()
     {
-        ShowMessage("Trigger entered!");
+        StartCoroutine(ShowMessage("Trigger entered!"));
     }
 
     private void OnEnable()
