@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ContextualMessageController : MonoBehaviour
 {
-    [SerializeField]
-    private float delayBeforehidingText = 3;
-
     private CanvasGroup canvasGroup;
     private TMP_Text messageText;
 
@@ -17,17 +14,17 @@ public class ContextualMessageController : MonoBehaviour
         canvasGroup.alpha = 0;
     }
 
-    private IEnumerator ShowMessage(string message)
+    private IEnumerator ShowMessage(string message, float messageDuration)
     {
         canvasGroup.alpha = 1;
         messageText.text = message;
-        yield return new WaitForSeconds(delayBeforehidingText);
+        yield return new WaitForSeconds(messageDuration);
         canvasGroup.alpha = 0;
     }
 
-    private void OnMessageTriggerEntered()
+    private void OnMessageTriggerEntered(string message, float messageDuration)
     {
-        StartCoroutine(ShowMessage("Trigger entered!"));
+        StartCoroutine(ShowMessage(message, messageDuration));
     }
 
     private void OnEnable()
