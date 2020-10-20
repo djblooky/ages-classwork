@@ -20,7 +20,6 @@ public class RigidbodyCharacterController : MonoBehaviour
     private new Rigidbody rigidbody;
     private Vector2 input;
     private new Collider collider;
-    
 
     private void Start()
     {
