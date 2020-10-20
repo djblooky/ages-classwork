@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RigidbodyCharacterController : MonoBehaviour
 {
@@ -50,14 +51,12 @@ public class RigidbodyCharacterController : MonoBehaviour
         {
             var targetRotation = Quaternion.LookRotation(cameraRelativeInputDirection);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed);
-        }
-       
+        }     
     }
 
-    private void Update()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
-
+        input = context.ReadValue<Vector2>();
     }
+
 }
