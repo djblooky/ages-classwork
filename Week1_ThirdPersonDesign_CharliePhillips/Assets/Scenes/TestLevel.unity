@@ -3672,7 +3672,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297356471}
-  m_LocalRotation: {x: 0.057430718, y: 0.91551465, z: -0.14123726, w: 0.37227252}
+  m_LocalRotation: {x: 0.057430714, y: 0.91551465, z: -0.14123724, w: 0.37227252}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4516,6 +4516,7 @@ GameObject:
   - component: {fileID: 1628748026}
   - component: {fileID: 1628748032}
   - component: {fileID: 1628748031}
+  - component: {fileID: 1628748033}
   m_Layer: 0
   m_Name: PortDoor
   m_TagString: Untagged
@@ -5413,6 +5414,25 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!95 &1628748033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628748025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f647056ca58768848927e18c5c7eff1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1651172509
 GameObject:
   m_ObjectHideFlags: 0
