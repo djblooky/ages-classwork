@@ -7,8 +7,11 @@ public class UIManager : MonoBehaviour
         get
         {
             if (_instance == null)
-                Debug.LogError("the UI manager is null");
-
+            {
+                GameObject go = new GameObject("UI Manager"); //lazy instantiation
+                go.AddComponent<UIManager>();
+            }
+ 
             return _instance;
         }
     }

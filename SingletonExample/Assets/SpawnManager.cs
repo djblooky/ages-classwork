@@ -20,8 +20,17 @@ public class SpawnManager : MonoBehaviour
         _instance = this;
     }
 
+    [SerializeField]
+    private GameObject enemy;
+
     public void StartSpawning()
     {
         Debug.Log("Spawn started");
+        Instantiate(enemy);
+    }
+
+    private void Start()
+    {
+        Debug.Log(Player.Instance.name);
     }
 }
