@@ -1491,6 +1491,31 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &348552309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d9595ac18257d9e4289c183d3c89c86f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1772160066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &348552310
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348552309}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d36f8f707dd501847ae3e1e62d65d248, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &358061610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,7 +6258,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d9595ac18257d9e4289c183d3c89c86f,
         type: 3}
       propertyPath: m_Name
-      value: Ch48_nonPBR
+      value: Model
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9595ac18257d9e4289c183d3c89c86f, type: 3}
