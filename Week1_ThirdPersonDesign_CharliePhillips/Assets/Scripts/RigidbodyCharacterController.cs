@@ -20,11 +20,15 @@ public class RigidbodyCharacterController : MonoBehaviour
     private new Rigidbody rigidbody;
     private Vector2 input;
     private new Collider collider;
+    private Animator animator;
+
+    private readonly int isMovingAnimParam = Animator.StringToHash("moveInput");
 
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<Collider>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
